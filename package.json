@@ -1,0 +1,52 @@
+{
+	"name": "pi-trans",
+	"version": "0.1.0",
+	"description": "Pi extension that lets you write prompts in your own language and read replies translated, while the model only sees English.",
+	"type": "module",
+	"license": "MIT",
+	"private": false,
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-extension",
+		"translation"
+	],
+	"files": [
+		"src",
+		"README.md",
+		"CHANGELOG.md",
+		"LICENSE"
+	],
+	"pi": {
+		"extensions": [
+			"./src/index.ts"
+		]
+	},
+	"scripts": {
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"lint": "biome check .",
+		"check": "biome check . && npm run typecheck && npm test"
+	},
+	"peerDependencies": {
+		"@earendil-works/pi-ai": "*",
+		"@earendil-works/pi-coding-agent": "*",
+		"@earendil-works/pi-tui": "*"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.11",
+		"@earendil-works/pi-ai": "1.5.2",
+		"@earendil-works/pi-coding-agent": "1.5.2",
+		"@earendil-works/pi-tui": "1.5.2",
+		"@types/node": "26.4.0",
+		"typescript": "7.0.2",
+		"vitest": "4.1.11"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/96tommykim/pi-trans.git"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	}
+}
